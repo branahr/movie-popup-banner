@@ -6,7 +6,7 @@ A WordPress plugin that displays a popup banner featuring movie details fetched 
 
 - Display a customizable movie popup banner.
 - Fetch movie details from TMDb API.
-- Configurable movie title, popup delay, and lightbox background color.
+- Configurable movie title, popup delay and lightbox background color.
 - User-friendly interface in the WordPress admin panel.
 
 ## Requirements
@@ -17,20 +17,41 @@ A WordPress plugin that displays a popup banner featuring movie details fetched 
 
 ## Installation
 
-1. **Download the Plugin:**
-   - Clone or download this repository to your local machine.
-   git clone https://github.com/yourusername/movie-popup-banner.git
+You can install the plugin in two different ways: **Direct Upload via wp-admin** or **Manual Upload**.
 
-2. **Upload the Plugin:**
+### Method 1: Install via WordPress Admin (Upload `.zip` file)
 
-    - Navigate to your WordPress installation directory.
-    - Copy the plugin folder (movie-popup-banner) to the /wp-content/plugins/ directory.
+1. **Download the Plugin as a ZIP File**:
+   - Click on the **Code** button at the top of this repository.
+   - Select **Download ZIP** to download the plugin files to your local computer.
 
-3. **Activate the Plugin:**
+2. **Log into WordPress Admin**:
+   - Go to your WordPress dashboard (`yourdomain.com/wp-admin`).
 
-    - Log in to your WordPress admin panel.
-    - Go to Plugins > Installed Plugins.
-    - Find the Movie Popup Banner plugin and click Activate.
+3. **Go to Plugins > Add New**:
+   - In the sidebar, navigate to **Plugins** > **Add New**.
+
+4. **Upload the Plugin**:
+   - At the top of the page, click the **Upload Plugin** button.
+   - Click the **Choose File** button and select the ZIP file you downloaded (`movie-popup-banner.zip`).
+   - Click **Install Now**.
+
+5. **Activate the Plugin**:
+   - Once the installation is complete, click the **Activate Plugin** button.
+
+### Method 2: Manual Installation via FTP
+
+1. **Download the Plugin**: 
+   - Download the plugin files as a ZIP file.
+
+2. **Upload the Plugin**:
+   - Navigate to your WordPress installation directory.
+   - Extract the ZIP file and upload the plugin folder (`movie-popup-banner`) to the `/wp-content/plugins/` directory using an FTP client.
+
+3. **Activate the Plugin**:
+   - Log in to your WordPress admin panel.
+   - Go to **Plugins** > **Installed Plugins**.
+   - Find the **Movie Popup Banner** plugin and click **Activate**.
 
 ## Configuration
 
