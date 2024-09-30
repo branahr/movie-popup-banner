@@ -1,4 +1,10 @@
 jQuery(document).ready(function($) {
+
+    if (!mpb_data.api_key || mpb_data.api_key === '') {
+        alert('TMDb API Key is missing. Please provide a valid API key in the plugin settings.');
+        return;
+    }
+    
     // Function to load movie data from TMDb API
     function loadMovieData() {
         const movieTitle = mpb_data.movie_title ? mpb_data.movie_title : 'Casino';

@@ -9,7 +9,7 @@ Author: Branko Borilovic
 // Add menu item for plugin settings
 add_action('admin_menu', 'mpb_create_menu');
 function mpb_create_menu() {
-    add_menu_page('Movie Popup Banner Settings', 'Movie Popup Banner', 'administrator', __FILE__, 'mpb_settings_page');
+    add_menu_page('Movie Popup Banner Settings', 'Movie Popup', 'administrator', __FILE__, 'mpb_settings_page');
     add_action('admin_init', 'mpb_register_settings');
 }
 
@@ -18,6 +18,7 @@ function mpb_register_settings() {
     register_setting('mpb-settings-group', 'mpb_movie_title');
     register_setting('mpb-settings-group', 'mpb_popup_delay');
     register_setting('mpb-settings-group', 'mpb_lightbox_color');
+    register_setting('mpb-settings-group', 'mpb_tmdb_api_key');
 }
 
 // Create settings page
@@ -50,6 +51,10 @@ function mpb_settings_page() {
                         </label>
                     </td>
                 </tr>
+                <tr valign="top">
+                    <th scope="row">TMDb API Key</th>
+                    <td><input type="text" name="mpb_tmdb_api_key" value="<?php echo esc_attr(get_option('mpb_tmdb_api_key')); ?>" /></td>
+                </tr>
             </table>
             <?php submit_button(); ?>
         </form>
@@ -68,7 +73,7 @@ function mpb_enqueue_scripts() {
         'movie_title' => get_option('mpb_movie_title'),
         'popup_delay' => get_option('mpb_popup_delay', 5) * 1000,
         'lightbox_color' => get_option('mpb_lightbox_color', 'black'),
-        'api_key' => 'e08c0edd7354020a8d8b35fc52aa39a5',
+        'api_key'        => get_option('mpb_tmdb_api_key'),
     ));
 }
 
