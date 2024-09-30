@@ -1,0 +1,118 @@
+#mpb-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+    width: 500px;
+    max-width: 90%;
+    z-index: 1001;
+    padding: 20px;
+    display: flex;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#mpb-popup.mpb-hidden {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+    pointer-events: none;
+}
+
+#mpb-popup:not(.mpb-hidden) {
+    opacity: 1; 
+    transform: translate(-50%, -50%) scale(1);
+}
+
+#mpb-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#mpb-overlay.mpb-hidden {
+    opacity: 0;
+    pointer-events: none; 
+}
+
+#mpb-overlay:not(.mpb-hidden) {
+    opacity: 1;
+}
+
+.mpb-popup-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.mpb-close-btn {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    line-height: 1; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;  
+    height: 40px;
+    width: 40px; 
+    border-radius: 50%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.mpb-close-btn:hover {
+    background: rgb(187, 189, 189);
+}
+
+.mpb-movie-info {
+    display: flex;
+    flex-direction: row;
+}
+
+.mpb-poster-container {
+    width:40%;
+    position: relative;
+    height: 100%;
+    margin: 7px 20px 0 0;
+}
+
+#mpb-movie-poster {
+    margin-right: 20px;
+    width: 100%;
+    height: auto;
+    max-width: 180px;
+}
+
+.mpb-popup-content h2 {
+    margin: 0 0 10px;
+    font-size: 1.4em;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+
+.mpb-movie-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 60%;
+}
+
+.mpb-movie-details p {
+    font-size: 18px;
+    font-weight: lighter;
+    line-height: 1.5;
+    margin: 0 auto;
+}
